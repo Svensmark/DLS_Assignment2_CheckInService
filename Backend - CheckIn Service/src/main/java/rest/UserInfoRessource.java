@@ -13,7 +13,6 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.SecurityContext;
-import security.UserPrincipal;
 import utils.EMF_Creator;
 
 /**
@@ -33,10 +32,7 @@ public class UserInfoRessource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("user")
-    @RolesAllowed({"Student", "Teacher"})
     public UserDTO getFromUser() {
-        UserPrincipal userPrincipal = (UserPrincipal)securityContext.getUserPrincipal();
-        UserDTO user = new UserDTO(userPrincipal.getName(), userPrincipal.getRoles(), userPrincipal.getId());
-        return user;
+        return null;
     }
 }

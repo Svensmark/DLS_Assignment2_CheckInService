@@ -8,8 +8,6 @@ package entities;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
@@ -18,9 +16,9 @@ import javax.validation.constraints.NotNull;
  * @author Emil Svensmark
  */
 @Entity
-public class Teacher implements Serializable {
+public class Student implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+      private static final long serialVersionUID = 1L;
     @Id
     @NotNull
     @Column(name = "user_id", length = 25)
@@ -29,7 +27,7 @@ public class Teacher implements Serializable {
     @Column(name = "name", length = 25)
     private String name;
 
-    public Teacher() {
+    public Student() {
     }
 
     public int getId() {
@@ -47,5 +45,5 @@ public class Teacher implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-
+    
 }
